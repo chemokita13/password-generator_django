@@ -1,0 +1,33 @@
+{%extends 'generator/layout.html' %}
+
+{% block content %}
+<div class="col-md-6 offset-md-4">
+    <form action="{%url 'password' %}" class="card">
+        <div class="card-title" style="text-align: center; margin-top: 1cm;">
+            <h5>Crear contraseña</h5>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="length">Elige la longitud de tu contrase&ntilde;a</label>
+                <input type="text" name="length" id="length">
+            </div>
+            <div class="form-group">
+                <label for="upper">May&uacute;sculas</label>
+                <input type="checkbox" name="upper" id="upper">
+            </div>
+            <div class="form-group">
+                <label for="numbers">N&uacute;meros</label>
+                <input type="checkbox" name="numbers" id="numbers">
+            </div>
+            <div class="form-group">
+                <label for="sc">Caracteres especiales</label>
+                <input type="checkbox" name="sc" id="sc">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-outline-info btn-block">Generar contrase&ntilde;a</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
